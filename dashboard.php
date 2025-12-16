@@ -558,7 +558,7 @@ try {
         
         <nav class="sidebar-nav">
             <a href="dashboard.php" class="nav-item active">
-                <i class="bi bi-speedometer2"></i> Dashboard
+                <i class="bi bi-house"></i> Menu Principal
             </a>
             
             <?php if (in_array($rol, ['Administrador', 'Gerente', 'Mesero'])): ?>
@@ -633,7 +633,7 @@ try {
                     <i class="bi bi-currency-dollar"></i>
                 </div>
                 <div class="stat-info">
-                    <h3>$<?php echo number_format($estadisticas['ventas_hoy'], 2); ?></h3>
+                    <h3>$<?php echo number_format($estadisticas['total_pedidos'] ?? 0, 2); ?></h3>
                     <p>Ventas Hoy</p>
                 </div>
             </div>

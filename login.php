@@ -160,6 +160,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         /* ================================
            PÁGINA DE AUTENTICACIÓN (Login)
            ================================ */
+
+           .auth-footer {
+            text-align: center;
+            margin-top: var(--spacing-lg);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--color-border);
+        }
         .auth-page {
             min-height: 100vh;
             display: flex;
@@ -185,7 +192,98 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .auth-card:hover {
             transform: translateY(-5px);
         }
+        
+          /* ================================
+           BOTÓN VOLVER AL INICIO - DISEÑO MINIMALISTA
+           ================================ */
+        .auth-footer {
+            text-align: center;
+            margin-top: var(--spacing-md);
+        }
 
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            padding: 0.5rem 0;
+            transition: all 0.2s ease;
+            position: relative;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Línea decorativa sutil */
+        .back-home::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        /* Efecto hover minimalista */
+        .back-home:hover {
+            color: var(--color-primary);
+        }
+
+        .back-home:hover::before {
+            width: 100%;
+        }
+
+        /* Flecha animada */
+        .back-home .arrow {
+            display: inline-block;
+            transition: transform 0.2s ease;
+            font-size: 1.1em;
+            line-height: 1;
+        }
+
+        .back-home:hover .arrow {
+            transform: translateX(-3px);
+        }
+
+        /* Versión más sutil (sin subrayado) */
+        .back-home.minimal-simple {
+            color: var(--color-text-secondary);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+        }
+
+        .back-home.minimal-simple:hover {
+            color: var(--color-primary);
+        }
+
+        /* Versión con icono SVG */
+        .back-home svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+            transition: transform 0.2s ease;
+        }
+
+        .back-home:hover svg {
+            transform: translateX(-2px);
+        }
+
+        /* Versión con borde sutil al hover */
+        .back-home.border-hover {
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid transparent;
+        }
+
+        .back-home.border-hover:hover {
+            border-color: var(--color-border);
+            background-color: rgba(204, 238, 255, 0.1);
+        }
         .auth-header {
             text-align: center;
             margin-bottom: var(--spacing-xl);
@@ -364,10 +462,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button type="submit" class="btn-login">
                     Iniciar Sesión
                 </button>
-                
+                <div class="auth-footer">
+                    <a href="index.php" class="back-home">
+                        <span class="arrow">←</span>
+                        Volver al inicio
+                    </a>
+                </div>
+
                 <div class="demo-credentials">
                     <small>
-                        Usuario: admin | Contraseña: admin123
+                        Usuario: Admin | Contraseña: admin123
                     </small>
                 </div>
             </form>

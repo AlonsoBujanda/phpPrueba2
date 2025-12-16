@@ -700,7 +700,7 @@ $estadisticas = $stmt->fetch(PDO::FETCH_ASSOC);
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-header">
-            <div class="sidebar-logo">🍽️ Restaurante</div>
+            <div class="sidebar-logo">Restaurante</div>
             <div class="sidebar-subtitle">Gestión de Mesas</div>
         </div>
         
@@ -718,7 +718,7 @@ $estadisticas = $stmt->fetch(PDO::FETCH_ASSOC);
         
         <nav class="sidebar-nav">
             <a href="dashboard.php" class="nav-item">
-                <i class="bi bi-speedometer2"></i> Dashboard
+                <i class="bi bi-house"></i>Menu Principal
             </a>
             <a href="mesas.php" class="nav-item active">
                 <i class="bi bi-table"></i> Mesas
