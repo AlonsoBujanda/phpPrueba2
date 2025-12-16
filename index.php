@@ -17,6 +17,7 @@ exit;
     <title>Sistema de Gestión - Restaurante</title>
     <link rel="stylesheet" href="CSS/style_index.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="Icon/favicon.ico" type="image/x-icon">
 </head>
 <body class="landing-page">
     <?php
